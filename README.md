@@ -33,7 +33,8 @@ go run .
 
 Press `q`, `Escape`, or `Ctrl+C` to exit.
 
-## Notes
+## Notes<img width="799" height="428" alt="Screenshot 2026-03-08 at 9 34 25 PM" src="https://github.com/user-attachments/assets/93fffe58-7760-42cd-bac7-8d0f833d02b4" />
+
 
 - Temperature monitoring is not supported on Apple Silicon due to macOS sensor access restrictions
 - Network speeds show MB/s delta per second
