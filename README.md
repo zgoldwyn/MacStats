@@ -1,4 +1,4 @@
-# mac-usage
+# mac-stats
 
 A terminal dashboard for monitoring macOS system stats in real time, built in Go.
 
@@ -19,3 +19,21 @@ Stats are collected using `gopsutil` and polled every second via a goroutine. Th
 
 Requires Go 1.18+
 ```bash
+git clone https://github.com/zgoldwyn/mac-dashboard.git
+cd mac-dashboard
+go mod tidy
+```
+
+## How to run
+
+Must be run from a real terminal (not an IDE console):
+```bash
+go run .
+```
+
+Press `q`, `Escape`, or `Ctrl+C` to exit.
+
+## Notes
+
+- Temperature monitoring is not supported on Apple Silicon due to macOS sensor access restrictions
+- Network speeds show MB/s delta per second — the first reading shows total bytes since boot
