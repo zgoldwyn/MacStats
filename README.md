@@ -1,4 +1,4 @@
-# mac-dashboard
+# mac-usage
 
 A terminal dashboard for monitoring macOS system stats in real time, built in Go.
 
