@@ -36,4 +36,4 @@ Press `q`, `Escape`, or `Ctrl+C` to exit.
 ## Notes
 
 - Temperature monitoring is not supported on Apple Silicon due to macOS sensor access restrictions
-- Network speeds show MB/s delta per second — the first reading shows total bytes since boot
+- Network speeds show MB/s delta per second
