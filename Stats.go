@@ -11,6 +11,7 @@ import (
 
 type Stats struct {
 	CPU         float64
+	CoreCPU     []float64
 	Memory      float64
 	Battery     float64
 	NetSent     float64
@@ -20,11 +21,17 @@ type Stats struct {
 }
 
 func (s *Stats) UpdateCPU() error {
-	percentCPU, err := cpu.Percent(time.Second, false)
+	all, err := cpu.Percent(time.Second, true)
 	if err != nil {
 		return err
 	}
-	s.CPU = percentCPU[0]
+	// average
+	var sum float64
+	for _, v := range all {
+		sum += v
+	}
+	s.CPU = sum / float64(len(all))
+	s.CoreCPU = all
 	return nil
 }
 func (s *Stats) UpdateMemory() error {
